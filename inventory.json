@@ -1,222 +1,272 @@
 [
   {
-    "Firework (Personal Stash)": "Midnight Madness",
-    "Quantity (cases)": 1
+    "name": "Midnight Madness",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Tren Loco",
-    "Quantity (cases)": 1
+    "name": "Tren Loco",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Grogu",
-    "Quantity (cases)": 1
+    "name": "Grogu",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Death Row",
-    "Quantity (cases)": 1
+    "name": "Death Row",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Rapture",
-    "Quantity (cases)": 1
+    "name": "Rapture",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "XXX",
-    "Quantity (cases)": 1
+    "name": "XXX",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Master Party",
-    "Quantity (cases)": 1
+    "name": "Master Party",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Another Master Piece",
-    "Quantity (cases)": 1
+    "name": "Another Master Piece",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": 420,
-    "Quantity (cases)": 1
+    "name": "420",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "The Boss",
-    "Quantity (cases)": 1
+    "name": "The Boss",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "DK",
-    "Quantity (cases)": 5
+    "name": "DK",
+    "price": 1.00,
+    "stock": 5
   },
   {
-    "Firework (Personal Stash)": "The Beast",
-    "Quantity (cases)": 1
+    "name": "The Beast",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Big Subwoofer",
-    "Quantity (cases)": 1
+    "name": "Big Subwoofer",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "PitBull",
-    "Quantity (cases)": 1
+    "name": "PitBull",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Big Budda",
-    "Quantity (cases)": 1
+    "name": "Big Budda",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Nosferatu",
-    "Quantity (cases)": 1
+    "name": "Nosferatu",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Hurricane",
-    "Quantity (cases)": 1
+    "name": "Hurricane",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Porky",
-    "Quantity (cases)": 1
+    "name": "Porky",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Dementors",
-    "Quantity (cases)": 2
+    "name": "Dementors",
+    "price": 1.00,
+    "stock": 2
   },
   {
-    "Firework (Personal Stash)": "MTK",
-    "Quantity (cases)": 1
+    "name": "MTK",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Nightcrawler",
-    "Quantity (cases)": 1
+    "name": "Nightcrawler",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Fortnite",
-    "Quantity (cases)": 2
+    "name": "Fortnite",
+    "price": 1.00,
+    "stock": 2
   },
   {
-    "Firework (Personal Stash)": "Flamingo",
-    "Quantity (cases)": 1
+    "name": "Flamingo",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Sold Out",
-    "Quantity (cases)": 1
+    "name": "Sold Out",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Hellbound",
-    "Quantity (cases)": 1
+    "name": "Hellbound",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "He-Man",
-    "Quantity (cases)": 1
+    "name": "He-Man",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Eruption",
-    "Quantity (cases)": 1
+    "name": "Eruption",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Invaders",
-    "Quantity (cases)": 1
+    "name": "Invaders",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "ICE",
-    "Quantity (cases)": 1
+    "name": "ICE",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Sin City",
-    "Quantity (cases)": 1
+    "name": "Sin City",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Shot Caller",
-    "Quantity (cases)": 1
+    "name": "Shot Caller",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Sheetz Revenge",
-    "Quantity (cases)": 1
+    "name": "Sheetz Revenge",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Watchu Gonna Do",
-    "Quantity (cases)": 1
+    "name": "Whatchu Gonna Do",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Hellfire",
-    "Quantity (cases)": 3
+    "name": "Hellfire",
+    "price": 1.00,
+    "stock": 3
   },
   {
-    "Firework (Personal Stash)": "Deadpool",
-    "Quantity (cases)": 1
+    "name": "Deadpool",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Warlock",
-    "Quantity (cases)": 1
+    "name": "Warlock",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Black Magic ",
-    "Quantity (cases)": 1
+    "name": "Black Magic",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Juiced",
-    "Quantity (cases)": 1
+    "name": "Juiced",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Dancing Aliens",
-    "Quantity (cases)": 1
+    "name": "Dancing Aliens",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Termination",
-    "Quantity (cases)": 1
+    "name": "Termination",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Cash Game",
-    "Quantity (cases)": 1
+    "name": "Cash Game",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Heaven & Hell",
-    "Quantity (cases)": 1
+    "name": "Heaven & Hell",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Balak",
-    "Quantity (cases)": 1
+    "name": "Balak",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Resurrection",
-    "Quantity (cases)": 1
+    "name": "Ressurection",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Ganger Paradis",
-    "Quantity (cases)": 1
+    "name": "Gangster Paradis",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Hulk Returns",
-    "Quantity (cases)": 1
+    "name": "Hulk Returns",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Rebellion",
-    "Quantity (cases)": 1
+    "name": "Rebellion",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Skull Crush",
-    "Quantity (cases)": 1
+    "name": "Skull Crusher",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "HCMF King Cobra",
-    "Quantity (cases)": "Kit"
+    "name": "HCMF King Cobra",
+    "price": 1.00,
+    "stock": 0.33
   },
   {
-    "Firework (Personal Stash)": "Joker",
-    "Quantity (cases)": "Kit"
+    "name": "Joker",
+    "price": 1.00,
+    "stock": 0.33
   },
   {
-    "Firework (Personal Stash)": "Grillz Top Dog Bling",
-    "Quantity (cases)": 1
+    "name": "Grillz Top Dog Bling",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Voodoo",
-    "Quantity (cases)": 1
+    "name": "Voodoo",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Gamibt",
-    "Quantity (cases)": 1
+    "name": "Gambit",
+    "price": 1.00,
+    "stock": 1
   },
   {
-    "Firework (Personal Stash)": "Death Punch",
-    "Quantity (cases)": 1
-  },
-  {
-    "Firework (Personal Stash)": "TOTAL:",
-    "Quantity (cases)": 62
+    "name": "Death Punch",
+    "price": 1.00,
+    "stock": 1
   }
 ]
