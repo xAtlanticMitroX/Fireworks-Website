@@ -1,4 +1,4 @@
-fetch('inventory.json')
+fetch("./inventory.json")
   .then(response => response.json())
   .then(data => {
     const inventoryDiv = document.getElementById("inventory");
