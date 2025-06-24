@@ -5,9 +5,9 @@ fetch("./inventory.json")
     data.forEach(item => {
       const product = document.createElement("div");
       product.innerHTML = `
-        <h2>${item.Name}</h2>
-        <p>Price: $${item.Price}</p>
-        <p>Stock: ${item.Stock}</p>
+        <h2>${item.name}</h2>
+        <p>Price: $${item.price}</p>
+        <p>Stock: ${item.stock}</p>
         <hr>
       `;
       inventoryDiv.appendChild(product);
