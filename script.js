@@ -1,7 +1,7 @@
-fetch('Fireworks Inventory.json')
+fetch('inventory.json')
   .then(response => response.json())
   .then(data => {
-    const inventoryDiv = document.getElementById("Fireworks Inventory");
+    const inventoryDiv = document.getElementById("inventory");
     data.forEach(item => {
       const product = document.createElement("div");
       product.innerHTML = `
