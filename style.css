@@ -121,3 +121,33 @@ body {
 .cart-item span {
   flex: 1;
 }
+
+.product-box {
+  background: #222;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+  transition: transform 0.2s;
+}
+
+.product-box:hover {
+  transform: scale(1.03);
+}
+
+.product-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-text {
+  flex: 1;
+}
+
+.product-img {
+  width: 50px;
+  height: auto;
+  margin-left: 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #f00;
+}
