@@ -1,4 +1,4 @@
-fetch('inventory.json')
+fetch('Fireworks Inventory.json')
   .then(response => response.json())
   .then(data => {
     const inventoryDiv = document.getElementById("inventory");
