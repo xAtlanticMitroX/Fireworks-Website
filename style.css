@@ -97,3 +97,27 @@ body {
   color: #aaa;
   border-top: 1px solid #333;
 }
+
+.cart-section {
+  max-width: 600px;
+  margin: 2em auto;
+  background: #222;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #f00;
+}
+
+#cart-items {
+  min-height: 50px;
+  margin-bottom: 1em;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+
+.cart-item span {
+  flex: 1;
+}
