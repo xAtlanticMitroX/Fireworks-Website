@@ -13,7 +13,8 @@
   {
     "name": "Grogu",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "image": "Images/grogu.png"
   },
   {
     "name": "Death Row",
