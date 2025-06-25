@@ -35,14 +35,26 @@ document.addEventListener('click', e => {
 });
 
 function addToCart(product) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
   const existing = cart.find(item => item.name === product.name);
   if (existing) {
     existing.qty++;
   } else {
     cart.push({ ...product, qty: 1 });
   }
-  updateCartDisplay();
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCartCount();
 }
+
+function updateCartCount() {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const count = cart.reduce((sum, item) => sum + item.qty, 0);
+  document.getElementById('cart-count').textContent = count;
+}
+
+updateCartCount();
 
 function updateCartDisplay() {
   if (cart.length === 0) {
