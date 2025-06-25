@@ -80,3 +80,17 @@ function updateCartCount() {
 
 // Initialize cart count on page load
 updateCartCount();
+
+// Theme toggle logic
+const themeToggle = document.getElementById('toggle-theme');
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme === 'light') {
+  document.body.classList.add('light-mode');
+}
+
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+  const theme = document.body.classList.contains('light-mode') ? 'light' : 'dark';
+  localStorage.setItem('theme', theme);
+});

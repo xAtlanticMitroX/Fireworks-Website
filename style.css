@@ -225,3 +225,49 @@ button:hover {
   margin-top: 0.5em;
   color: #ffcc00;
 }
+
+.theme-toggle {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+#toggle-theme {
+  background-color: transparent;
+  border: 2px solid #f00;
+  color: #f00;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#toggle-theme:hover {
+  background-color: #f00;
+  color: black;
+}
+
+body.light-mode {
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+body.light-mode .product {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 10px #ccc;
+}
+
+body.light-mode .hero-banner {
+  background: linear-gradient(to right, #ffe, #ffd);
+  color: #222;
+  text-shadow: none;
+}
+
+body.light-mode .promo-banner {
+  background: #ffd700;
+  color: #000;
+  box-shadow: 0 0 15px #888;
+  text-shadow: none;
+}
