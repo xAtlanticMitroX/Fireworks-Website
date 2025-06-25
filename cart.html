@@ -14,10 +14,12 @@
     </nav>
   </header>
 
-  <section class="cart-section">
+    <section class="cart-section">
     <div id="cart-items">Loading cart...</div>
     <button id="clear-cart">Clear Cart</button>
-  </section>
+    <button id="checkout-btn" style="margin-left: 1em;">Checkout</button>  <!-- NEW -->
+    </section>
+
 
   <script>
     const cartItemsDiv = document.getElementById("cart-items");
@@ -47,6 +49,17 @@
     });
 
     loadCart();
+
+    document.getElementById('checkout-btn').addEventListener('click', () => {
+    // If cart is empty, alert user, else go to checkout.html
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (cart.length === 0) {
+        alert('Your cart is empty! Add some fireworks before checkout.');
+    } else {
+        window.location.href = 'checkout.html';
+    }
+    });
+
   </script>
 </body>
 </html>
