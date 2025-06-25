@@ -70,3 +70,29 @@ clearCartBtn.addEventListener('click', () => {
 
 // Initial call to show empty cart on page load
 updateCartDisplay();
+
+// 🔍 Image Modal Logic
+const modal = document.getElementById("image-modal");
+const modalImg = document.getElementById("modal-image");
+const closeBtn = document.querySelector(".close-btn");
+
+document.addEventListener("click", e => {
+  if (e.target.classList.contains("product-img")) {
+    modal.style.display = "block";
+    modalImg.src = e.target.src;
+  }
+});
+
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") modal.style.display = "none";
+});
