@@ -94,3 +94,29 @@ themeToggle.addEventListener('click', () => {
   const theme = document.body.classList.contains('light-mode') ? 'light' : 'dark';
   localStorage.setItem('theme', theme);
 });
+
+function updateCartDisplay() {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  let totalItems = 0;
+  let totalPrice = 0;
+
+  cart.forEach(item => {
+    totalItems += item.qty;
+    totalPrice += item.price * item.qty;
+  });
+
+  const cartIcon = document.getElementById('cart-icon');
+  const totalPriceSpan = document.getElementById('total-price');
+
+  if (cartIcon) {
+    cartIcon.setAttribute('data-count', totalItems);
+  }
+
+  if (totalPriceSpan) {
+    totalPriceSpan.textContent = `$${totalPrice.toFixed(2)}`;
+  }
+}
+
+// Call it when the page loads
+updateCartDisplay();
