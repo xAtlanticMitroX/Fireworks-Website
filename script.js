@@ -6,15 +6,22 @@ fetch("./inventory.json")
 
     data.forEach(item => {
       const product = document.createElement("div");
-      product.classList.add("product-box");
+      product.className = "product";
 
       product.innerHTML = `
         <h2>${item.name}</h2>
+        <img src="${item.image}" alt="${item.name}" class="product-img" />
         <p>Price: $${item.price}</p>
         <p>Stock: ${item.stock}</p>
-        <button class="add-to-cart" data-name="${item.name}" data-price="${item.price}">Add to Cart</button>
-        ${item.image ? `<img src="${item.image}" alt="${item.name}" class="product-img">` : ''}
+        <button>Add to Cart</button>
+        <hr>
       `;
+
+      // Add click event to image:
+      const img = product.querySelector("img");
+      img.addEventListener("click", () => {
+        openModal(img.src, item.name);
+      });
 
       inventoryDiv.appendChild(product);
     });
@@ -90,23 +97,17 @@ clearCartBtn.addEventListener('click', () => {
 updateCartDisplay();
 
 // Modal Logic
-const modal = document.getElementById("image-modal");
-const modalImg = document.getElementById("modal-image");
-const closeBtn = document.querySelector(".close-btn");
+function openModal(src, alt) {
+  const modal = document.getElementById("image-modal");
+  const modalImg = document.getElementById("modal-img");
+  const caption = document.getElementById("caption");
 
-document.addEventListener("click", e => {
-  if (e.target.classList.contains("product-img")) {
-    modal.style.display = "block";
-    modalImg.src = e.target.src;
-  }
-});
+  modal.style.display = "block";
+  modalImg.src = src;
+  caption.textContent = alt;
+}
 
-closeBtn.addEventListener("click", () => {
-  modal.style.display = "none";
-});
-
-modal.addEventListener("click", e => {
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
+// Close modal when clicking the X:
+document.getElementById("close-modal").addEventListener("click", () => {
+  document.getElementById("image-modal").style.display = "none";
 });
