@@ -127,3 +127,43 @@ function updateCartDisplay() {
 
 // Call it when the page loads
 updateCartDisplay();
+
+let inventoryData = []; // global to store all inventory
+
+fetch("./inventory.json")
+  .then(response => response.json())
+  .then(data => {
+    inventoryData = data;
+    renderInventory("all");
+  })
+  .catch(err => console.error("Failed to load inventory:", err));
+
+function renderInventory(category) {
+  const inventoryDiv = document.getElementById("inventory");
+  inventoryDiv.innerHTML = "";
+
+  const filtered = category === "all"
+    ? inventoryData
+    : inventoryData.filter(item => item.category === category);
+
+  filtered.forEach(item => {
+    const product = document.createElement("div");
+    product.classList.add("product");
+    product.innerHTML = `
+      <h2>${item.name}</h2>
+      <p>Price: $${item.price}</p>
+      <p>Stock: ${item.stock}</p>
+      <p>Category: ${item.category}</p>
+      <button onclick='addToCart(${JSON.stringify(item)})'>Add to Cart</button>
+    `;
+    inventoryDiv.appendChild(product);
+  });
+}
+
+// Add filter button listeners
+document.querySelectorAll("#category-filter button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const cat = btn.getAttribute("data-category");
+    renderInventory(cat);
+  });
+});

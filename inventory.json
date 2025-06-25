@@ -3,272 +3,326 @@
     "name": "Midnight Madness",
     "price": 1.00,
     "stock": 1,
-    "image": "Images/midnight-madness.jpg"
+    "image": "Images/midnight-madness.jpg",
+    "category": "Cake"
   },
   {
     "name": "Tren Loco",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Grogu",
     "price": 1.00,
     "stock": 1,
-    "image": "Images/grogu.png"
+    "image": "Images/grogu.png",
+    "category": "Cake"
   },
   {
     "name": "Death Row",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Rapture",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "XXX",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Master Party",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Another Master Piece",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "420",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Big Boar"
   },
   {
     "name": "The Boss",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "DK",
     "price": 1.00,
-    "stock": 5
+    "stock": 5,
+    "category": "Finale"
   },
   {
     "name": "The Beast",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Big Boar"
   },
   {
     "name": "Big Subwoofer",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Big Boar"
   },
   {
     "name": "PitBull",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Big Budda",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Big Boar"
   },
   {
     "name": "Nosferatu",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Hurricane",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Porky",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Big Boar"
   },
   {
     "name": "Dementors",
     "price": 1.00,
-    "stock": 2
+    "stock": 2,
+    "category": "Cake"
   },
   {
     "name": "MTK",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Nightcrawler",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Fortnite",
     "price": 1.00,
-    "stock": 2
+    "stock": 2,
+    "category": "Finale"
   },
   {
     "name": "Flamingo",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Sold Out",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Hellbound",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "He-Man",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Eruption",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Invaders",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "ICE",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Sin City",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Shot Caller",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Finale"
   },
   {
     "name": "Sheetz Revenge",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Finale"
   },
   {
     "name": "Whatchu Gonna Do",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Hellfire",
     "price": 1.00,
-    "stock": 3
+    "stock": 3,
+    "category": "Finale"
   },
   {
     "name": "Deadpool",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Warlock",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Black Magic",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Juiced",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Dancing Aliens",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Termination",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Cash Game",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Finale"
   },
   {
     "name": "Heaven & Hell",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Valak",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Compound Cake"
   },
   {
     "name": "Ressurection",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Gangster Paradis",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Hulk Returns",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Rebellion",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Skull Crusher",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "HCMF King Cobra",
     "price": 1.00,
-    "stock": 0.33
+    "stock": 0.33,
+    "category": "Shells"
   },
   {
     "name": "Joker",
     "price": 1.00,
-    "stock": 0.33
+    "stock": 0.33,
+    "category": "Shells"
   },
   {
     "name": "Grillz Top Dog Bling",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Voodoo",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Gambit",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   },
   {
     "name": "Death Punch",
     "price": 1.00,
-    "stock": 1
+    "stock": 1,
+    "category": "Cake"
   }
 ]

@@ -345,3 +345,30 @@ body.light-mode .promo-banner {
   font-size: 1.2em;
   margin-left: 0.5em;
 }
+
+#category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  margin: 1.5em 0;
+}
+
+#category-filter button {
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 8px;
+  background: #f00;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#category-filter button:hover {
+  background: #cc0000;
+}
+#category-filter button.active {
+  background: #ff0000;
+  color: #fff;
+}
