@@ -175,3 +175,53 @@ button:hover {
 .product button {
   margin-top: 0.5em;
 }
+
+.hero-banner {
+  background: linear-gradient(to right, #111, #300000);
+  color: #fff;
+}
+
+.hero-banner {
+  background: url('images/fireworks-bg.jpg') no-repeat center center/cover;
+  text-align: center;
+  padding: 4em 1em;
+  color: white;
+  text-shadow: 0 0 10px #f00, 0 0 20px #ff0;
+  box-shadow: 0 0 20px #f00 inset;
+  margin-bottom: 2em;
+}
+
+.hero-banner h1 {
+  font-size: 3em;
+  margin: 0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.hero-banner p {
+  font-size: 1.5em;
+  margin-top: 0.5em;
+  color: #ffcc00;
+}
+.hero-banner {
+  background: url('images/fireworks-bg.jpg') no-repeat center center/cover;
+  text-align: center;
+  padding: 4em 1em;
+  color: white;
+  text-shadow: 0 0 10px #f00, 0 0 20px #ff0;
+  box-shadow: 0 0 20px #f00 inset;
+  margin-bottom: 2em;
+}
+
+.hero-banner h1 {
+  font-size: 3em;
+  margin: 0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.hero-banner p {
+  font-size: 1.5em;
+  margin-top: 0.5em;
+  color: #ffcc00;
+}
