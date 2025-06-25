@@ -1,7 +1,9 @@
+// Load Inventory
 fetch("./inventory.json")
   .then(response => response.json())
   .then(data => {
     const inventoryDiv = document.getElementById("inventory");
+
     data.forEach(item => {
       const product = document.createElement("div");
       product.classList.add("product-box");
@@ -19,9 +21,11 @@ fetch("./inventory.json")
   })
   .catch(err => console.error("Failed to load inventory:", err));
 
-  const cart = [];
+// Cart Logic
+const cart = [];
+const cartItemsDiv = document.getElementById("cart-items");
+const clearCartBtn = document.getElementById("clear-cart");
 
-// Listen for Add to Cart clicks
 document.addEventListener('click', e => {
   if (e.target.classList.contains('add-to-cart')) {
     const name = e.target.getAttribute('data-name');
@@ -31,25 +35,21 @@ document.addEventListener('click', e => {
 });
 
 function addToCart(product) {
-  // Check if product already in cart
   const existing = cart.find(item => item.name === product.name);
   if (existing) {
     existing.qty++;
   } else {
     cart.push({ ...product, qty: 1 });
   }
-  alert(`Added ${product.name} to cart!`);
-  console.log(cart);
+  updateCartDisplay();
 }
-
-const cartItemsDiv = document.getElementById('cart-items');
-const clearCartBtn = document.getElementById('clear-cart');
 
 function updateCartDisplay() {
   if (cart.length === 0) {
     cartItemsDiv.textContent = 'Cart is empty.';
     return;
   }
+
   cartItemsDiv.innerHTML = '';
   cart.forEach(item => {
     const div = document.createElement('div');
@@ -65,13 +65,11 @@ function updateCartDisplay() {
 clearCartBtn.addEventListener('click', () => {
   cart.length = 0;
   updateCartDisplay();
-  alert('Cart cleared!');
 });
 
-// Initial call to show empty cart on page load
 updateCartDisplay();
 
-// 🔍 Image Modal Logic
+// Modal Logic
 const modal = document.getElementById("image-modal");
 const modalImg = document.getElementById("modal-image");
 const closeBtn = document.querySelector(".close-btn");
@@ -87,12 +85,8 @@ closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
-modal.addEventListener("click", (e) => {
+modal.addEventListener("click", e => {
   if (e.target === modal) {
     modal.style.display = "none";
   }
-});
-
-document.addEventListener("keydown", e => {
-  if (e.key === "Escape") modal.style.display = "none";
 });

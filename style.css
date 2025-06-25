@@ -1,43 +1,33 @@
-/* ===== General Styles ===== */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
   background: #111;
   color: #f5f5f5;
-  line-height: 1.6;
 }
 
-/* ===== Header ===== */
+/* Header */
 .site-header {
   background: #222;
-  text-align: center;
   padding: 1em 0;
-  box-shadow: 0 2px 4px rgba(255, 0, 0, 0.2);
+  text-align: center;
 }
-
 .site-title {
   margin: 0;
   color: #f00;
   font-size: 2em;
 }
-
-.site-nav {
-  margin-top: 0.5em;
-}
-
 .site-nav a {
   color: #fff;
   margin: 0 1em;
   text-decoration: none;
   font-weight: bold;
 }
-
 .site-nav a:hover {
   text-decoration: underline;
 }
 
-/* ===== Hero Section ===== */
+/* Hero */
 .hero {
   text-align: center;
   padding: 3em 1em;
@@ -45,83 +35,22 @@ body {
   color: #fff;
 }
 
-/* ===== Inventory Section ===== */
+/* Inventory */
 .inventory-section {
   padding: 2em;
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .section-title {
   text-align: center;
-  margin-bottom: 1em;
-  font-size: 2em;
   color: #f00;
+  margin-bottom: 1em;
 }
-
-/* ===== Inventory Grid ===== */
 .inventory-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.5em;
 }
-
-.inventory-grid div {
-  background: #222;
-  padding: 1em;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
-  transition: transform 0.2s;
-}
-
-.inventory-grid div:hover {
-  transform: scale(1.03);
-}
-
-.inventory-grid h2 {
-  margin-top: 0;
-  font-size: 1.25em;
-  color: #ff5555;
-}
-
-.inventory-grid p {
-  margin: 0.5em 0;
-}
-
-/* ===== Footer ===== */
-.site-footer {
-  background: #111;
-  text-align: center;
-  padding: 1em;
-  font-size: 0.9em;
-  color: #aaa;
-  border-top: 1px solid #333;
-}
-
-.cart-section {
-  max-width: 600px;
-  margin: 2em auto;
-  background: #222;
-  padding: 1em;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #f00;
-}
-
-#cart-items {
-  min-height: 50px;
-  margin-bottom: 1em;
-}
-
-.cart-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5em;
-}
-
-.cart-item span {
-  flex: 1;
-}
-
 .product-box {
   background: #222;
   padding: 1em;
@@ -129,21 +58,9 @@ body {
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
   transition: transform 0.2s;
 }
-
 .product-box:hover {
   transform: scale(1.03);
 }
-
-.product-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.product-text {
-  flex: 1;
-}
-
 .product-img {
   width: 100%;
   max-height: 120px;
@@ -153,7 +70,38 @@ body {
   box-shadow: 0 0 5px #f00;
 }
 
-/* ===== Image Modal Styles ===== */
+/* Cart */
+.cart-section {
+  max-width: 600px;
+  margin: 2em auto;
+  background: #222;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #f00;
+}
+#cart-items {
+  min-height: 50px;
+  margin-bottom: 1em;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+.cart-item span {
+  flex: 1;
+}
+
+/* Footer */
+.site-footer {
+  background: #111;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -163,10 +111,8 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: rgba(0, 0, 0, 0.9);
 }
-
 .modal-content {
   margin: auto;
   display: block;
@@ -175,7 +121,6 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 20px #f00;
 }
-
 .close-btn {
   position: absolute;
   top: 30px;
@@ -185,7 +130,6 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
-
 .close-btn:hover {
   color: #f00;
 }
