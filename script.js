@@ -5,19 +5,15 @@ fetch("./inventory.json")
     data.forEach(item => {
       const product = document.createElement("div");
       product.classList.add("product-box");
-      
+
       product.innerHTML = `
-        <div class="product-content">
-          <div class="product-text">
-            <h2>${item.name}</h2>
-            <p>Price: $${item.price}</p>
-            <p>Stock: ${item.stock}</p>
-            <button class="add-to-cart" data-name="${item.name}" data-price="${item.price}">Add to Cart</button>
-            ${item.image ? `<img src="${item.image}" alt="${item.name}" class="product-img">` : ''}
-          </div>
-        </div>
+        <h2>${item.name}</h2>
+        <p>Price: $${item.price}</p>
+        <p>Stock: ${item.stock}</p>
+        <button class="add-to-cart" data-name="${item.name}" data-price="${item.price}">Add to Cart</button>
+        ${item.image ? `<img src="${item.image}" alt="${item.name}" class="product-img">` : ''}
       `;
-      
+
       inventoryDiv.appendChild(product);
     });
   })
