@@ -1,251 +1,10 @@
-/* --- General Styles --- */
+/* General Layout */
 body {
-  margin: 0;
-  background-color: #121212;
+  background-color: #000;
+  color: white;
   font-family: Arial, sans-serif;
-  color: #eee;
-}
-
-/* --- Header --- */
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em 2em;
-  background-color: #222;
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 1.5em;
-}
-
-.site-title {
   margin: 0;
-  color: #f00;
-  font-size: 1.8em;
-}
-
-.site-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  margin-right: 1em;
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-}
-
-.cart-icon-link {
-  position: relative;
-  font-size: 1.5em;
-  color: white;
-  text-decoration: none;
-}
-
-#cart-count {
-  background-color: red;
-  color: white;
-  font-size: 0.8em;
-  border-radius: 50%;
-  padding: 0.2em 0.5em;
-  position: absolute;
-  top: -10px;
-  right: -12px;
-}
-
-.cart-total-price {
-  color: #fff;
-  font-weight: bold;
-  font-size: 1em;
-}
-
-/* Grid layout for inventory */
-.inventory-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5em;
-  max-width: 1200px;
-  margin: 2em auto;
-  padding: 0 1em;
-}
-
-/* Individual product box */
-.product {
-  background-color: #111;
-  border-radius: 8px;
-  padding: 1em;
-  box-shadow: 0 0 10px #f00;
-  color: #eee;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.product-img {
-  width: 100%;
-  max-width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 6px;
-  cursor: pointer;
-  box-shadow: 0 0 5px #f00;
-  margin-bottom: 0.5em;
-}
-
-.product-img:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
-
-.product h2 {
-  margin: 0 0 0.25em 0;
-  font-size: 1.25em;
-}
-
-.product p {
-  margin: 0.1em 0;
-  font-size: 1em;
-}
-
-/* --- Modal --- */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80vw;
-  height: 80vh;
-  object-fit: contain;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #f00;
-  max-width: 900px;
-  max-height: 90vh;
-}
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.close:hover,
-.close:focus {
-  color: #f00;
-  text-decoration: none;
-}
-
-/* --- Buttons --- */
-button {
-  background-color: #f00;
-  color: white;
-  font-weight: bold;
-  border: none;
-  padding: 0.5em 1em;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1em;
-}
-
-button:hover {
-  background-color: #c00;
-}
-
-.product button {
-  margin-top: 0.5em;
-}
-
-.hero-banner {
-  background: linear-gradient(to right, #111, #300000);
-  color: #fff;
-}
-
-.hero-banner {
-  background: url('images/fireworks-bg.jpg') no-repeat center center/cover;
-  text-align: center;
-  padding: 4em 1em;
-  color: white;
-  text-shadow: 0 0 10px #f00, 0 0 20px #ff0;
-  box-shadow: 0 0 20px #f00 inset;
-  margin-bottom: 2em;
-}
-
-.hero-banner h1 {
-  font-size: 3em;
-  margin: 0;
-  color: #fff;
-  font-weight: bold;
-}
-
-.hero-banner p {
-  font-size: 1.5em;
-  margin-top: 0.5em;
-  color: #ffcc00;
-}
-.hero-banner {
-  background: url('images/fireworks-bg.jpg') no-repeat center center/cover;
-  text-align: center;
-  padding: 4em 1em;
-  color: white;
-  text-shadow: 0 0 10px #f00, 0 0 20px #ff0;
-  box-shadow: 0 0 20px #f00 inset;
-  margin-bottom: 2em;
-}
-
-.hero-banner h1 {
-  font-size: 3em;
-  margin: 0;
-  color: #fff;
-  font-weight: bold;
-}
-
-.hero-banner p {
-  font-size: 1.5em;
-  margin-top: 0.5em;
-  color: #ffcc00;
-}
-
-.theme-toggle {
-  position: absolute;
-  top: 1em;
-  right: 1em;
-}
-
-#toggle-theme {
-  background-color: transparent;
-  border: 2px solid #f00;
-  color: #f00;
-  padding: 0.5em 1em;
-  font-size: 1em;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-#toggle-theme:hover {
-  background-color: #f00;
-  color: black;
+  padding: 0;
 }
 
 body.light-mode {
@@ -253,10 +12,37 @@ body.light-mode {
   color: #222;
 }
 
-body.light-mode .product {
-  background-color: #fff;
-  color: #000;
-  box-shadow: 0 0 10px #ccc;
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: #111;
+  color: white;
+  box-shadow: 0 0 10px #f00;
+}
+
+.site-title {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.site-right {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+/* Hero Banner */
+.hero-banner {
+  background: linear-gradient(to right, #220000, #550000);
+  padding: 2em;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px #000;
 }
 
 body.light-mode .hero-banner {
@@ -265,61 +51,79 @@ body.light-mode .hero-banner {
   text-shadow: none;
 }
 
-body.light-mode .hero-banner h1 {
-  color: #b30000;
+.hero-banner h1 {
+  font-size: 3em;
 }
 
-body.light-mode .hero-banner p {
-  color: #333;
+.hero-banner p {
+  font-size: 1.3em;
 }
 
-
-body.light-mode .promo-banner {
-  background: #ffd700;
-  color: #000;
-  box-shadow: 0 0 15px #888;
-  text-shadow: none;
-}
-
-.site-header {
+/* Category Filters */
+#category-filter {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 1em;
+  justify-content: center;
+  margin: 1.5em 0;
+}
+
+#category-filter button {
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  background: #f00;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#category-filter button:hover {
+  background: #cc0000;
+}
+
+/* Inventory Product Grid */
+#inventory {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1em;
   padding: 1em 2em;
-  background-color: #111;
+}
+
+/* Product Box */
+.product {
+  background: #111;
+  padding: 1em;
+  border-radius: 10px;
   box-shadow: 0 0 10px #f00;
   color: white;
 }
 
-.site-left .site-title {
-  font-size: 1.8em;
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
+body.light-mode .product {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 10px #ccc;
 }
 
-.site-right {
+.product-inner {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 1em;
 }
 
-#toggle-theme {
-  background-color: transparent;
-  border: 2px solid #f00;
-  color: #f00;
-  padding: 0.4em 0.8em;
-  font-size: 1em;
-  border-radius: 8px;
+.product-text {
+  flex: 1;
+}
+
+.product-image img {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
   cursor: pointer;
-  transition: all 0.3s;
 }
 
-#toggle-theme:hover {
-  background-color: #f00;
-  color: black;
-}
-
+/* Cart Icon Bubble */
 #cart-icon {
   position: relative;
   font-size: 1.8em;
@@ -339,73 +143,19 @@ body.light-mode .promo-banner {
   border-radius: 50%;
   border: 1px solid white;
 }
-.cart-total-price {
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.2em;
-  margin-left: 0.5em;
-}
 
-#category-filter {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  justify-content: center;
-  margin: 1.5em 0;
-}
-
-#category-filter button {
-  padding: 0.6em 1.2em;
-  border: none;
+/* Theme Button */
+#toggle-theme {
+  background-color: transparent;
+  border: 2px solid #f00;
+  color: #f00;
+  padding: 0.4em 0.8em;
+  font-size: 1em;
   border-radius: 8px;
-  background: #f00;
-  color: white;
-  font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-#category-filter button:hover {
-  background: #cc0000;
-}
-#category-filter button.active {
-  background: #ff0000;
-  color: #fff;
-}
-
-.product {
-  background: #111;
-  padding: 1em;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #f00;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.product-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.product-text {
-  flex: 1;
-}
-
-.product-image {
-  margin-left: 1em;
-}
-
-.firework-img {
-  width: 100px;
-  height: auto;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.firework-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #f00;
+#toggle-theme:hover {
+  background-color: #f00;
+  color: black;
 }

@@ -2,17 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Atlantic Fireworks Store</title>
+  <title>Atlantic Fireworks</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="site-left">
       <a href="index.html" class="site-title">Atlantic Fireworks</a>
-      
     </div>
-
     <div class="site-right">
       <span id="total-price">$0.00</span>
       <a href="cart.html" id="cart-icon" data-count="0">🛒</a>
@@ -20,10 +17,9 @@
     </div>
   </header>
 
-
   <section class="hero-banner">
     <h1>Atlantic Fireworks</h1>
-    <p>Sparkle up your night with amazing fireworks!</p>
+    <p>Sparkle up your night with cool fireworks!</p>
   </section>
 
   <div id="category-filter">
@@ -34,17 +30,7 @@
     <button data-category="Shells">Shells</button>
   </div>
 
-
-  <main class="inventory-container" id="inventory">
-    <!-- Products loaded here by script.js -->
-  </main>
-
-  <!-- Modal for Image Preview -->
-  <div id="image-modal" class="modal">
-    <span id="close-modal" class="close">&times;</span>
-    <img class="modal-content" id="modal-img" />
-    <div id="caption"></div>
-  </div>
+  <main id="inventory"></main>
 
   <script src="script.js"></script>
 </body>
