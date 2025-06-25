@@ -64,33 +64,43 @@ body {
   font-size: 1em;
 }
 
-/* --- Inventory --- */
+/* Grid layout for inventory */
 .inventory-container {
-  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5em;
+  max-width: 1200px;
   margin: 2em auto;
   padding: 0 1em;
 }
 
-/* --- Product Box --- */
+/* Individual product box */
 .product {
   background-color: #111;
   border-radius: 8px;
   padding: 1em;
-  margin-bottom: 1.5em;
   box-shadow: 0 0 10px #f00;
+  color: #eee;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1em;
+  text-align: center;
 }
 
 .product-img {
-  width: 120px;
-  height: 120px;
+  width: 100%;
+  max-width: 160px;
+  height: 160px;
   object-fit: cover;
   border-radius: 6px;
   cursor: pointer;
   box-shadow: 0 0 5px #f00;
-  flex-shrink: 0;
+  margin-bottom: 0.5em;
+}
+
+.product-img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 .product h2 {
@@ -160,4 +170,8 @@ button {
 
 button:hover {
   background-color: #c00;
+}
+
+.product button {
+  margin-top: 0.5em;
 }
