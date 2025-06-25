@@ -116,5 +116,7 @@ function setupImageClickListeners() {
       modalImg.src = "";
     }
   });
+  
+
+  setupImageClickListeners();
 }
-setupImageClickListeners();
