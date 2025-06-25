@@ -159,3 +159,40 @@ body.light-mode .product {
   background-color: #f00;
   color: black;
 }
+
+#image-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  flex-direction: column;
+  padding: 2em;
+}
+
+#image-modal.hidden {
+  display: none;
+}
+
+#modal-image {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #f00;
+}
+
+#close-modal {
+  color: white;
+  font-size: 3em;
+  cursor: pointer;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+#close-modal:hover {
+  color: #f00;
+}

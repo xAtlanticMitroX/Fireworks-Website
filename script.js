@@ -91,3 +91,30 @@ toggle.addEventListener("click", () => {
   const newTheme = document.body.classList.contains("light-mode") ? "light" : "dark";
   localStorage.setItem("theme", newTheme);
 });
+
+function setupImageClickListeners() {
+  const allImages = document.querySelectorAll(".firework-img");
+  const modal = document.getElementById("image-modal");
+  const modalImg = document.getElementById("modal-image");
+  const closeModal = document.getElementById("close-modal");
+
+  allImages.forEach(img => {
+    img.addEventListener("click", () => {
+      modalImg.src = img.src;
+      modal.classList.remove("hidden");
+    });
+  });
+
+  closeModal.addEventListener("click", () => {
+    modal.classList.add("hidden");
+    modalImg.src = "";
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+      modalImg.src = "";
+    }
+  });
+}
+setupImageClickListeners();
