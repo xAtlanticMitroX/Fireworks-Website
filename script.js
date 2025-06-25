@@ -12,9 +12,9 @@ fetch("./inventory.json")
             <h2>${item.name}</h2>
             <p>Price: $${item.price}</p>
             <p>Stock: ${item.stock}</p>
+            ${item.image ? `<img src="${item.image}" alt="${item.name}" class="product-img">` : ''}
             <button class="add-to-cart" data-name="${item.name}" data-price="${item.price}">Add to Cart</button>
           </div>
-          ${item.image ? `<img src="${item.image}" alt="${item.name}" class="product-img">` : ''}
         </div>
       `;
       
