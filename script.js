@@ -1,3 +1,4 @@
+// script.js
 let inventoryData = [];
 
 fetch("./inventory.json")
@@ -8,7 +9,6 @@ fetch("./inventory.json")
     updateCartDisplay();
   });
 
-// Renders filtered inventory
 function renderInventory(category) {
   const inventoryDiv = document.getElementById("inventory");
   inventoryDiv.innerHTML = "";
@@ -36,9 +36,10 @@ function renderInventory(category) {
     `;
     inventoryDiv.appendChild(product);
   });
+
+  setupImageClickListeners();
 }
 
-// Filter buttons
 document.querySelectorAll("#category-filter button").forEach(btn => {
   btn.addEventListener("click", () => {
     const cat = btn.getAttribute("data-category");
@@ -46,7 +47,6 @@ document.querySelectorAll("#category-filter button").forEach(btn => {
   });
 });
 
-// Add to cart
 function addToCart(item) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   const existing = cart.find(i => i.name === item.name);
@@ -62,7 +62,6 @@ function addToCart(item) {
   updateCartDisplay();
 }
 
-// Cart display update
 function updateCartDisplay() {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   let totalItems = 0;
@@ -80,7 +79,6 @@ function updateCartDisplay() {
   if (totalPriceSpan) totalPriceSpan.textContent = `$${totalPrice.toFixed(2)}`;
 }
 
-// Theme toggle
 const toggle = document.getElementById("toggle-theme");
 const currentTheme = localStorage.getItem("theme");
 
@@ -93,12 +91,12 @@ toggle.addEventListener("click", () => {
 });
 
 function setupImageClickListeners() {
-  const allImages = document.querySelectorAll(".firework-img");
+  const images = document.querySelectorAll(".firework-img");
   const modal = document.getElementById("image-modal");
   const modalImg = document.getElementById("modal-image");
   const closeModal = document.getElementById("close-modal");
 
-  allImages.forEach(img => {
+  images.forEach(img => {
     img.addEventListener("click", () => {
       modalImg.src = img.src;
       modal.classList.remove("hidden");
@@ -116,7 +114,4 @@ function setupImageClickListeners() {
       modalImg.src = "";
     }
   });
-  
-
-  setupImageClickListeners();
 }

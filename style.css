@@ -1,4 +1,4 @@
-/* General Layout */
+/* style.css */
 body {
   background-color: #000;
   color: white;
@@ -12,7 +12,6 @@ body.light-mode {
   color: #222;
 }
 
-/* Header */
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -36,7 +35,6 @@ body.light-mode {
   align-items: center;
 }
 
-/* Hero Banner */
 .hero-banner {
   background: linear-gradient(to right, #220000, #550000);
   padding: 2em;
@@ -59,7 +57,6 @@ body.light-mode .hero-banner {
   font-size: 1.3em;
 }
 
-/* Category Filters */
 #category-filter {
   display: flex;
   gap: 1em;
@@ -82,7 +79,6 @@ body.light-mode .hero-banner {
   background: #cc0000;
 }
 
-/* Inventory Product Grid */
 #inventory {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -90,7 +86,6 @@ body.light-mode .hero-banner {
   padding: 1em 2em;
 }
 
-/* Product Box */
 .product {
   background: #111;
   padding: 1em;
@@ -123,7 +118,6 @@ body.light-mode .product {
   cursor: pointer;
 }
 
-/* Cart Icon Bubble */
 #cart-icon {
   position: relative;
   font-size: 1.8em;
@@ -144,7 +138,6 @@ body.light-mode .product {
   border: 1px solid white;
 }
 
-/* Theme Button */
 #toggle-theme {
   background-color: transparent;
   border: 2px solid #f00;
@@ -165,13 +158,13 @@ body.light-mode .product {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
-  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
   flex-direction: column;
-  padding: 2em;
 }
 
 #image-modal.hidden {
@@ -192,7 +185,4 @@ body.light-mode .product {
   position: absolute;
   top: 1em;
   right: 1em;
-}
-#close-modal:hover {
-  color: #f00;
 }
