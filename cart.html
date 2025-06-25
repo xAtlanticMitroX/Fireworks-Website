@@ -2,32 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Your Cart - Atlantic Fireworks</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
-    <h1 class="site-title">🛒 Your Cart</h1>
-    <nav class="site-nav">
-      <a href="index.html">← Back to Shop</a>
-    </nav>
+    <div class="header-left">
+      <h1 class="site-title">🛒 Your Cart</h1>
+      <nav class="site-nav">
+        <a href="index.html">← Back to Shop</a>
+      </nav>
+    </div>
+    <div class="header-right">
+      <a href="cart.html" class="cart-icon-link">
+        🛒<span id="cart-count">0</span>
+      </a>
+      <span id="cart-total-price" class="cart-total-price">$0.00</span>
+    </div>
   </header>
 
-    <section class="cart-section">
+  <section class="cart-section" style="max-width: 900px; margin: 2em auto; padding: 1em;">
     <div id="cart-items">Loading cart...</div>
     <button id="clear-cart">Clear Cart</button>
-    <button id="checkout-btn" style="margin-left: 1em;">Checkout</button>  <!-- NEW -->
-    </section>
-
+    <button id="checkout-btn" style="margin-left: 1em;">Checkout</button>
+  </section>
 
   <script>
-    const cartItemsDiv = document.getElementById("cart-items");
-
+    // Load and display cart items
     function loadCart() {
       let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartItemsDiv = document.getElementById("cart-items");
+
       if (cart.length === 0) {
         cartItemsDiv.textContent = "Your cart is empty.";
+        updateCartCount();
         return;
       }
 
@@ -35,31 +44,50 @@
       cart.forEach(item => {
         const div = document.createElement('div');
         div.classList.add('cart-item');
+        div.style.display = "flex";
+        div.style.justifyContent = "space-between";
+        div.style.marginBottom = "1em";
         div.innerHTML = `
           <span>${item.name} x${item.qty}</span>
           <span>$${(item.price * item.qty).toFixed(2)}</span>
         `;
         cartItemsDiv.appendChild(div);
       });
+
+      updateCartCount();
     }
 
+    // Clear cart button
     document.getElementById('clear-cart').addEventListener('click', () => {
       localStorage.removeItem('cart');
       loadCart();
     });
 
-    loadCart();
-
+    // Checkout button
     document.getElementById('checkout-btn').addEventListener('click', () => {
-    // If cart is empty, alert user, else go to checkout.html
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    if (cart.length === 0) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      if (cart.length === 0) {
         alert('Your cart is empty! Add some fireworks before checkout.');
-    } else {
+      } else {
         window.location.href = 'checkout.html';
-    }
+      }
     });
 
+    // Update cart icon count and total price
+    function updateCartCount() {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      const count = cart.reduce((sum, item) => sum + item.qty, 0);
+      const total = cart.reduce((sum, item) => sum + item.qty * item.price, 0);
+
+      const countSpan = document.getElementById('cart-count');
+      const totalSpan = document.getElementById('cart-total-price');
+
+      if (countSpan) countSpan.textContent = count;
+      if (totalSpan) totalSpan.textContent = `$${total.toFixed(2)}`;
+    }
+
+    loadCart();
   </script>
 </body>
 </html>

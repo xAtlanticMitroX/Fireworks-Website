@@ -38,15 +38,11 @@ function loadOrderSummary() {
 document.getElementById('checkout-form').addEventListener('submit', e => {
   e.preventDefault();
 
-  // Simple validation already handled by 'required' attributes
+  // Normally send data to backend or email service here
+  // For now just clear cart & show confirmation
 
-  // Normally, here you'd send the data to a backend or email API
-  // For now, just simulate successful order
-
-  // Clear cart
   localStorage.removeItem('cart');
 
-  // Hide form and summary, show confirmation
   document.querySelector('.checkout-summary').style.display = 'none';
   document.querySelector('.checkout-form-section').style.display = 'none';
   document.getElementById('confirmation-message').style.display = 'block';

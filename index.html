@@ -2,13 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Atlantic Fireworks</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atlantic Fireworks Store</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- 🔥 Header and Nav -->
   <header class="site-header">
     <div class="header-left">
       <h1 class="site-title">🔥 Atlantic Fireworks</h1>
@@ -24,29 +22,16 @@
     </div>
   </header>
 
+  <main class="inventory-container" id="inventory">
+    <!-- Products loaded here by script.js -->
+  </main>
 
-  <!-- 🎇 Hero Banner -->
-  <section class="hero">
-    <h2>🎇 Welcome to Atlantic Fireworks 🎇</h2>
-    <p>Explore our explosive selection and light up your next celebration!</p>
-  </section>
-
-  <!-- 💥 Inventory Grid -->
-  <section class="inventory-section">
-    <h2 class="section-title">💥 All Fireworks</h2>
-    <div id="inventory" class="inventory-grid"></div>
-  </section>
-
-  <!-- 🔍 Image Modal -->
+  <!-- Modal for Image Preview -->
   <div id="image-modal" class="modal">
     <span id="close-modal" class="close">&times;</span>
     <img class="modal-content" id="modal-img" />
     <div id="caption"></div>
   </div>
-
-  <footer class="site-footer">
-    <p>© 2025 Atlantic Fireworks. All rights reserved.</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>

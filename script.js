@@ -1,26 +1,32 @@
-// Load Inventory
+// Load inventory.json and display products
 fetch("./inventory.json")
   .then(response => response.json())
   .then(data => {
     const inventoryDiv = document.getElementById("inventory");
-
     data.forEach(item => {
       const product = document.createElement("div");
       product.className = "product";
 
       product.innerHTML = `
-        <h2>${item.name}</h2>
-        <img src="${item.image}" alt="${item.name}" class="product-img" />
-        <p>Price: $${item.price}</p>
-        <p>Stock: ${item.stock}</p>
-        <button>Add to Cart</button>
-        <hr>
+        <img src="${item.image || 'default-image.jpg'}" alt="${item.name}" class="product-img" />
+        <div>
+          <h2>${item.name}</h2>
+          <p>Price: $${item.price.toFixed(2)}</p>
+          <p>Stock: ${item.stock}</p>
+          <button>Add to Cart</button>
+        </div>
       `;
 
-      // Add click event to image:
+      // Add image click event for modal
       const img = product.querySelector("img");
       img.addEventListener("click", () => {
         openModal(img.src, item.name);
+      });
+
+      // Add to cart button
+      const addToCartBtn = product.querySelector("button");
+      addToCartBtn.addEventListener("click", () => {
+        addToCart(item);
       });
 
       inventoryDiv.appendChild(product);
@@ -28,33 +34,37 @@ fetch("./inventory.json")
   })
   .catch(err => console.error("Failed to load inventory:", err));
 
-// Cart Logic
-const cart = [];
-const cartItemsDiv = document.getElementById("cart-items");
-const clearCartBtn = document.getElementById("clear-cart");
+// Modal open function
+function openModal(src, alt) {
+  const modal = document.getElementById("image-modal");
+  const modalImg = document.getElementById("modal-img");
+  const caption = document.getElementById("caption");
 
-document.addEventListener('click', e => {
-  if (e.target.classList.contains('add-to-cart')) {
-    const name = e.target.getAttribute('data-name');
-    const price = parseFloat(e.target.getAttribute('data-price'));
-    addToCart({ name, price });
-  }
+  modal.style.display = "block";
+  modalImg.src = src;
+  caption.textContent = alt;
+}
+
+// Modal close button
+document.getElementById("close-modal").addEventListener("click", () => {
+  document.getElementById("image-modal").style.display = "none";
 });
 
+// Add to cart and update localStorage
 function addToCart(product) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
   const existing = cart.find(item => item.name === product.name);
+
   if (existing) {
     existing.qty++;
   } else {
     cart.push({ ...product, qty: 1 });
   }
-
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartCount();
 }
 
+// Update cart icon count and total price
 function updateCartCount() {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -68,46 +78,5 @@ function updateCartCount() {
   if (totalSpan) totalSpan.textContent = `$${total.toFixed(2)}`;
 }
 
-
+// Initialize cart count on page load
 updateCartCount();
-
-function updateCartDisplay() {
-  if (cart.length === 0) {
-    cartItemsDiv.textContent = 'Cart is empty.';
-    return;
-  }
-
-  cartItemsDiv.innerHTML = '';
-  cart.forEach(item => {
-    const div = document.createElement('div');
-    div.classList.add('cart-item');
-    div.innerHTML = `
-      <span>${item.name} x${item.qty}</span>
-      <span>$${(item.price * item.qty).toFixed(2)}</span>
-    `;
-    cartItemsDiv.appendChild(div);
-  });
-}
-
-clearCartBtn.addEventListener('click', () => {
-  cart.length = 0;
-  updateCartDisplay();
-});
-
-updateCartDisplay();
-
-// Modal Logic
-function openModal(src, alt) {
-  const modal = document.getElementById("image-modal");
-  const modalImg = document.getElementById("modal-img");
-  const caption = document.getElementById("caption");
-
-  modal.style.display = "block";
-  modalImg.src = src;
-  caption.textContent = alt;
-}
-
-// Close modal when clicking the X:
-document.getElementById("close-modal").addEventListener("click", () => {
-  document.getElementById("image-modal").style.display = "none";
-});
