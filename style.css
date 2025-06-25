@@ -200,3 +200,15 @@ body {
 .site-nav a:hover {
   text-decoration: underline;
 }
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.cart-total-price {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+}

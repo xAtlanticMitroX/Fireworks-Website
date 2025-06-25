@@ -50,9 +50,17 @@ function addToCart(product) {
 
 function updateCartCount() {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
   const count = cart.reduce((sum, item) => sum + item.qty, 0);
-  document.getElementById('cart-count').textContent = count;
+  const total = cart.reduce((sum, item) => sum + item.qty * item.price, 0);
+
+  const countSpan = document.getElementById('cart-count');
+  const totalSpan = document.getElementById('cart-total-price');
+
+  if (countSpan) countSpan.textContent = count;
+  if (totalSpan) totalSpan.textContent = `$${total.toFixed(2)}`;
 }
+
 
 updateCartCount();
 
