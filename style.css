@@ -372,3 +372,40 @@ body.light-mode .promo-banner {
   background: #ff0000;
   color: #fff;
 }
+
+.product {
+  background: #111;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #f00;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-text {
+  flex: 1;
+}
+
+.product-image {
+  margin-left: 1em;
+}
+
+.firework-img {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.firework-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #f00;
+}

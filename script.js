@@ -3,31 +3,24 @@ fetch("./inventory.json")
   .then(response => response.json())
   .then(data => {
     const inventoryDiv = document.getElementById("inventory");
-    data.forEach(item => {
+    filtered.forEach(item => {
       const product = document.createElement("div");
-      product.className = "product";
+      product.classList.add("product");
 
       product.innerHTML = `
-        <img src="${item.image || 'default-image.jpg'}" alt="${item.name}" class="product-img" />
-        <div>
-          <h2>${item.name}</h2>
-          <p>Price: $${item.price.toFixed(2)}</p>
-          <p>Stock: ${item.stock}</p>
-          <button>Add to Cart</button>
+        <div class="product-inner">
+          <div class="product-text">
+            <h2>${item.name}</h2>
+            <p>Price: $${item.price}</p>
+            <p>Stock: ${item.stock}</p>
+            <p>Category: ${item.category}</p>
+            <button onclick='addToCart(${JSON.stringify(item)})'>Add to Cart</button>
+          </div>
+          <div class="product-image">
+            <img src="images/${item.image}" alt="${item.name}" class="firework-img" />
+          </div>
         </div>
       `;
-
-      // Add image click event for modal
-      const img = product.querySelector("img");
-      img.addEventListener("click", () => {
-        openModal(img.src, item.name);
-      });
-
-      // Add to cart button
-      const addToCartBtn = product.querySelector("button");
-      addToCartBtn.addEventListener("click", () => {
-        addToCart(item);
-      });
 
       inventoryDiv.appendChild(product);
     });
