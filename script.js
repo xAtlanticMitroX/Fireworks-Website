@@ -51,18 +51,25 @@ document.getElementById("close-modal").addEventListener("click", () => {
 });
 
 // Add to cart and update localStorage
-function addToCart(product) {
+function addToCart(item) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const existing = cart.find(item => item.name === product.name);
 
-  if (existing) {
-    existing.qty++;
+  // Check if item already in cart
+  const existingItem = cart.find(i => i.name === item.name);
+
+  if (existingItem) {
+    existingItem.qty += 1;
   } else {
-    cart.push({ ...product, qty: 1 });
+    item.qty = 1;
+    cart.push(item);
   }
+
   localStorage.setItem('cart', JSON.stringify(cart));
-  updateCartCount();
+
+  // Update the UI immediately after adding
+  updateCartDisplay();
 }
+
 
 // Update cart icon count and total price
 function updateCartCount() {
