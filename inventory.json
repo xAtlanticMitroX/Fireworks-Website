@@ -3,7 +3,7 @@
     "name": "Midnight Madness",
     "price": 1.00,
     "stock": 1,
-    "image": "midnight-madness.jpg",
+    "image": "Images/midnight-madness.jpg",
     "category": "Cake"
   },
   {
@@ -16,7 +16,7 @@
     "name": "Grogu",
     "price": 1.00,
     "stock": 1,
-    "image": "grogu.png",
+    "image": "Images/grogu.png",
     "category": "Cake"
   },
   {
