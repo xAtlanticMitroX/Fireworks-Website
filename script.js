@@ -30,7 +30,7 @@ function renderInventory(category) {
           <button onclick='addToCart(${JSON.stringify(item)})'>Add to Cart</button>
         </div>
         <div class="product-image">
-          <img src="images/${item.image}" alt="${item.name}" class="firework-img">
+          <img src="Images/${item.image}" alt="${item.name}" class="firework-img">
         </div>
       </div>
     `;
