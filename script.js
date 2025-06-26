@@ -40,6 +40,44 @@ function renderInventory(category) {
   setupImageClickListeners();
 }
 
+document.getElementById("search-input").addEventListener("input", (e) => {
+  const query = e.target.value.toLowerCase();
+
+  const filtered = inventoryData.filter(item =>
+    item.name.toLowerCase().includes(query)
+  );
+
+  renderFilteredInventory(filtered);
+});
+
+function renderFilteredInventory(filteredItems) {
+  const inventoryDiv = document.getElementById("inventory");
+  inventoryDiv.innerHTML = "";
+
+  filteredItems.forEach(item => {
+    const product = document.createElement("div");
+    product.classList.add("product");
+    product.innerHTML = `
+      <div class="product-inner">
+        <div class="product-text">
+          <h2>${item.name}</h2>
+          <p>Price: $${item.price}</p>
+          <p>Stock: ${item.stock}</p>
+          <p>Category: ${item.category}</p>
+          <button onclick='addToCart(${JSON.stringify(item)})'>Add to Cart</button>
+        </div>
+        <div class="product-image">
+          <img src="images/${item.image}" alt="${item.name}" class="firework-img">
+        </div>
+      </div>
+    `;
+    inventoryDiv.appendChild(product);
+  });
+
+  setupImageClickListeners();
+}
+
+
 document.querySelectorAll("#category-filter button").forEach(btn => {
   btn.addEventListener("click", () => {
     const cat = btn.getAttribute("data-category");
