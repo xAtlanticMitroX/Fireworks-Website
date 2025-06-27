@@ -206,3 +206,79 @@ body.light-mode .product {
   top: 1em;
   right: 1em;
 }
+
+.sold-out {
+  display: inline-block;
+  background-color: #444;
+  color: #aaa;
+  padding: 0.4em 0.8em;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+body.light-mode .sold-out {
+  background-color: #eee;
+  color: #999;
+}
+
+.disabled-button {
+  background-color: #555;
+  color: #ccc;
+  cursor: not-allowed;
+  border: none;
+}
+
+body.light-mode .disabled-button {
+  background-color: #ddd;
+  color: #999;
+}
+.disabled-button {
+  background-color: #555;
+  color: #ccc;
+  cursor: not-allowed;
+  border: none;
+}
+
+body.light-mode .disabled-button {
+  background-color: #ddd;
+  color: #999;
+}
+#footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  position: relative;
+}
+
+.checkout-page {
+  max-width: 600px;
+  margin: auto;
+  padding: 2em;
+}
+
+.checkout-page input,
+.checkout-page textarea {
+  width: 100%;
+  padding: 0.8em;
+  margin: 0.5em 0 1em;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+.checkout-page button {
+  padding: 0.6em 1.2em;
+  background-color: #e60000;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+.checkout-page button:hover {
+  background-color: #cc0000;
+}

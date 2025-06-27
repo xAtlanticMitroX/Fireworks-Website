@@ -1,66 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Checkout - Atlantic Fireworks</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Checkout - Punjabi Pyro Fireworks</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-left">
-      <h1 class="site-title">🛒 Checkout</h1>
-      <nav class="site-nav">
-        <a href="index.html">← Back to Shop</a>
-      </nav>
-    </div>
-    <div class="header-right">
-      <a href="cart.html" class="cart-icon-link">
-        🛒<span id="cart-count">0</span>
-      </a>
-      <span id="cart-total-price" class="cart-total-price">$0.00</span>
-    </div>
+  <header>
+    <h1>Punjabi Pyro Fireworks</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+    </nav>
   </header>
 
-  <main class="checkout-main" style="max-width: 800px; margin: 2em auto; background: #222; padding: 2em; border-radius: 10px; color: #f5f5f5;">
-    <section class="checkout-summary">
-      <h2>Order Summary</h2>
-      <div id="order-items">Loading your cart...</div>
-      <p><strong>Total: </strong><span id="order-total">$0.00</span></p>
-    </section>
+  <main class="checkout-page">
+    <h2>Checkout</h2>
+    <form id="checkout-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
 
-    <section class="checkout-form-section">
-      <h2>Shipping & Contact Info</h2>
-      <form id="checkout-form">
-        <label>
-          Full Name:<br />
-          <input type="text" id="name" required />
-        </label><br /><br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
 
-        <label>
-          Email:<br />
-          <input type="email" id="email" required />
-        </label><br /><br />
+      <label for="address">Shipping Address:</label>
+      <textarea id="address" required></textarea>
 
-        <label>
-          Phone Number:<br />
-          <input type="tel" id="phone" />
-        </label><br /><br />
+      <button type="submit">Place Order</button>
+    </form>
 
-        <label>
-          Shipping Address:<br />
-          <textarea id="address" rows="3" required></textarea>
-        </label><br /><br />
-
-        <button type="submit">Place Order</button>
-      </form>
-    </section>
-
-    <section id="confirmation-message" style="display:none; margin-top:2em;">
-      <h2>Thank you for your order!</h2>
-      <p>We will process your fireworks and contact you shortly.</p>
-      <button id="back-to-shop">Back to Shop</button>
-    </section>
+    <div id="order-confirmation" class="hidden">
+      <h3>Thank you! Your order has been placed. 🎆</h3>
+    </div>
   </main>
 
   <script src="checkout.js"></script>

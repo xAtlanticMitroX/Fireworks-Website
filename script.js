@@ -20,6 +20,10 @@ function renderInventory(category) {
   filtered.forEach(item => {
     const product = document.createElement("div");
     product.classList.add("product");
+    const addButton = item.stock > 0
+      ? `<button onclick='addToCart(${JSON.stringify(item)})'>Add to Cart</button>`
+      : `<button disabled class="disabled-button">Sold Out</button>`;
+
     product.innerHTML = `
       <div class="product-inner">
         <div class="product-text">
@@ -27,13 +31,14 @@ function renderInventory(category) {
           <p>Price: $${item.price}</p>
           <p>Stock: ${item.stock}</p>
           <p>Category: ${item.category}</p>
-          <button onclick='addToCart(${JSON.stringify(item)})'>Add to Cart</button>
+          ${addButton}
         </div>
         <div class="product-image">
-          <img src="Images/${item.image}" alt="${item.name}" class="firework-img">
+          <img src="images/${item.image}" alt="${item.name}" class="firework-img">
         </div>
       </div>
     `;
+
     inventoryDiv.appendChild(product);
   });
 
@@ -57,6 +62,10 @@ function renderFilteredInventory(filteredItems) {
   filteredItems.forEach(item => {
     const product = document.createElement("div");
     product.classList.add("product");
+    const addButton = item.stock > 0
+      ? `<button onclick='addToCart(${JSON.stringify(item)})'>Add to Cart</button>`
+      : `<button disabled class="disabled-button">Sold Out</button>`;
+
     product.innerHTML = `
       <div class="product-inner">
         <div class="product-text">
@@ -64,13 +73,14 @@ function renderFilteredInventory(filteredItems) {
           <p>Price: $${item.price}</p>
           <p>Stock: ${item.stock}</p>
           <p>Category: ${item.category}</p>
-          <button onclick='addToCart(${JSON.stringify(item)})'>Add to Cart</button>
+          ${addButton}
         </div>
         <div class="product-image">
           <img src="images/${item.image}" alt="${item.name}" class="firework-img">
         </div>
       </div>
     `;
+
     inventoryDiv.appendChild(product);
   });
 
@@ -87,18 +97,24 @@ document.querySelectorAll("#category-filter button").forEach(btn => {
 
 function addToCart(item) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const existing = cart.find(i => i.name === item.name);
+  const cartItem = cart.find(i => i.name === item.name);
+  const currentStock = item.stock;
 
-  if (existing) {
-    existing.qty += 1;
+  if (cartItem) {
+    if (cartItem.qty < currentStock) {
+      cartItem.qty += 1;
+    } else {
+      alert("Sorry, you’ve reached the maximum stock for this item.");
+      return;
+    }
   } else {
-    item.qty = 1;
-    cart.push(item);
+    cart.push({ ...item, qty: 1 });
   }
 
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartDisplay();
 }
+
 
 function updateCartDisplay() {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
